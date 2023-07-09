@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log(currentDateFormatted + 'T' + currentTime);
 
-  const apiUrl = 'http://185.125.44.116:8084/api/MeasuredDatas';
+  const apiUrl = 'https://185.125.44.116:8084/api/MeasuredDatas';
   const queryParams = new URLSearchParams({
     SortOrder: 'MonitoringPost', 
     Language: 'en', 
