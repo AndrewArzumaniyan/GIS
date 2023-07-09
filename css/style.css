@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E7E7E7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9EE298;
+  border-radius: 10px;
+}
+
+body {
+  background: #eee;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.modal {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal.active {
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper {
+  width: 410px;
+  height: 250px;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.modal-btn-close::after,
+.modal-btn-close::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #B9B9B9;
+  top: 50%;
+}
+
+.modal-btn-close::after {
+  transform: translate(0, -50%) rotate(45deg);
+}
+
+.modal-btn-close::before {
+  transform: translate(0, -50%) rotate(-45deg);
+}
+
+.modal-box {
+  padding: 10px 7px 10px 15px;
+}
+
+.modal-body {
+  height: 200px;
+  overflow: auto;
+  padding-right: 5px;
+}
+
+.modal-table {
+	width: 100%;
+	border-collapse: collapse; 
+}
+.modal-table tr {
+  border-radius: 5px;
+}
+
+.modal-table th {
+	font-weight: bold;
+	padding: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 8px;
+}
+
+.modal-table td {
+	border: none;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.modal-table tr:not(:last-child) td {
+  padding: 0 0 5px 0;
+}
+
+.modal-table td div {
+  background-color: #CDFFC1;
+  padding: 5px
+}
+
+.modal-title {
+  font-size: 12px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.modal-table th:first-child,
+.modal-table td:first-child {
+  border-right: 2px solid #161616;
+}
+
+.modal-table td:first-child {
+  border-radius: 5px 0 0 5px; 
+}
+.modal-table td:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.header {
+  background: #fff;
+}
+
+.wrapper {
+  max-width: 100vw;
+  max-height: 100vh;
+  /* overflow: hidden; */
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px 0;
+}
+
+.map {
+  width: 100%;
+  height: 80vh;
+}
+
+.map-container {
+  border-radius: 10px;
+  box-shadow: 0px 4px 16px 0px rgba(158, 226, 152, 0.50);
+  overflow: hidden;
+}
+
+.circle-1,
+.circle-2 {
+  position: absolute;
+  z-index: -1;
+}
+
+.circle-1 {
+  top: -100px;
+  left: -200px;
+}
+
+.circle-2 {
+  right: -200px;
+  bottom: -100px;
+}
